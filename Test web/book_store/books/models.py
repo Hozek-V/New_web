@@ -6,5 +6,8 @@ class Books(models.Model):
     isbn = models.CharField(max_length=30)
     description = models.CharField(max_length=500)
 
+    class Meta:
+        verbose_name_plural = "Books"
+
     def __str__(self):
         return f"{self.title} {self.isbn}"
