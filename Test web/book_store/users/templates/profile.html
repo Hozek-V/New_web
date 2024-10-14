@@ -1,0 +1,15 @@
+{% extends "web_parts/master.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+
+{% block content %}
+    <div>
+        <h1>Profile</h1>
+        <br>
+        <h2>{{ user.username }}</h2>
+        <p>{{ user.email }}</p>
+    </div>
+{% endblock %}

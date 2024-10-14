@@ -1,0 +1,17 @@
+{% extends "web_parts/master.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    <small>
+        Need An Account? <a href="{% url 'register' %}">Sign Up Now</a>
+    </small>
+{% endblock %}
