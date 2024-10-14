@@ -1,0 +1,17 @@
+{% extends "web_parts/master.html" %}
+
+{% block title %}
+    Detail
+{% endblock %}
+
+
+{% block content %}
+    <h1>{{ object.title }}</h1>
+    <p><strong>Author:</strong> {{ object.author }}</p>
+    <p><strong>Published Date:</strong> {{ object.published_date }}</p>
+    <p><strong>ISBN:</strong> {{ object.isbn }}</p>
+    <br>
+    <a href="{% url 'book_update' object.pk %}">Edit</a>
+    <a href="{% url 'book_delete' object.pk %}">Delete</a>
+    <a href="{% url 'book_list' %}">Back to Book List</a>
+{% endblock %}

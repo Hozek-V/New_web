@@ -6,6 +6,9 @@
         <li>
             <a href="{% url 'about' %}">About</a>
         </li>
+        <li>
+            <a href="{% url 'book_list' %}">Book List</a>
+        </li>
 
         {% if user.is_authenticated %}
             <li>
